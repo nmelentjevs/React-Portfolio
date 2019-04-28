@@ -58,6 +58,7 @@ class Main extends Component {
   };
 
   render() {
+    console.log(keys);
     const { projects, currentPage } = this.state;
     return (
       <div className="main-wrapper">
