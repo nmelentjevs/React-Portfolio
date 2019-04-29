@@ -13,6 +13,7 @@
 
 # misc
 .DS_Store
+.env 
 .env.local
 .env.development.local
 .env.test.local
@@ -25,4 +26,5 @@ yarn-error.log*
 # keys
 /src/config/keys_dev.js
 
-.env # This contains secrets, don't store in source control
+
+# This contains secrets, don't store in source control
