@@ -12,9 +12,11 @@
 /build
 
 # misc
-.vscode
+/.vscode
 .DS_Store
 .env 
+.env.production
+.env.development
 .env.local
 .env.development.local
 .env.test.local
