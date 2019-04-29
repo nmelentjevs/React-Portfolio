@@ -4,7 +4,6 @@ import './App.css';
 // components
 
 import Main from './components/pages/Main';
-require('dotenv').config();
 
 function App() {
   return (

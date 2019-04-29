@@ -34,7 +34,7 @@ let data = {
 
 let config = {
   headers: {
-    Authorization: 'Bearer ' + keys.github
+    Authorization: 'Bearer ' + toString(process.env.REACT_APP_GITHUB_KEY)
   }
 };
 
@@ -48,8 +48,13 @@ class Main extends Component {
   }
 
   componentDidMount() {
+    console.log(process.env);
     axios
-      .post('https://api.github.com/graphql', data, config)
+      .post('https://api.github.com/graphql', data, {
+        headers: {
+          Authorization: 'Bearer ' + toString(process.env.REACT_APP_GITHUB_KEY)
+        }
+      })
       .then(res => this.setState({ projects: res.data }));
   }
 
