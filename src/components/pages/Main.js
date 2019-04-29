@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
-import keys from '../../config/keys';
-
 import Navbar from '../layout/Navbar';
 import Contact from './Contact';
 import Projects from './Projects';
@@ -32,9 +30,11 @@ let data = {
   query
 };
 
+const GITHUB_KEY = process.env.REACT_APP_GITHUB_KEY;
+
 let config = {
   headers: {
-    Authorization: 'Bearer ' + toString(process.env.REACT_APP_GITHUB_KEY)
+    Authorization: 'Bearer ' + GITHUB_KEY
   }
 };
 
@@ -48,13 +48,8 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    console.log(process.env);
     axios
-      .post('https://api.github.com/graphql', data, {
-        headers: {
-          Authorization: 'Bearer ' + toString(process.env.REACT_APP_GITHUB_KEY)
-        }
-      })
+      .post('https://api.github.com/graphql', data, config)
       .then(res => this.setState({ projects: res.data }));
   }
 
