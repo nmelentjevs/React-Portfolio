@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-require('dotenv').config();
 
 // components
 
 import Main from './components/pages/Main';
+require('dotenv').config();
 
 function App() {
   return (
