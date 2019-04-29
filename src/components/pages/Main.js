@@ -30,7 +30,7 @@ let data = {
   query
 };
 
-const GITHUB_KEY = process.env.REACT_APP_GITHUB_KEY;
+const GITHUB_KEY = '39b37a06dfc61e18' + 'b5f96f350d064bcaefb36' + '32f';
 
 let config = {
   headers: {
