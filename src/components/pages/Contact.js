@@ -4,7 +4,12 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <form data-aos="fade" data-aos-delay="300">
+        <form
+          action="https://formspree.io/nmelentjevs@gmail.com"
+          method="POST"
+          data-aos="fade"
+          data-aos-delay="300"
+        >
           <div className="section-heading">
             <h1>Contact</h1>
             <h6>Let's work together</h6>
@@ -27,9 +32,9 @@ function Contact() {
           />
           <label htmlFor="services">Subject:</label>
           <select name="services" id="services">
-            <option value="">Web Design</option>
-            <option value="">Web Developement</option>
-            <option value="">Other</option>
+            <option value="Web Design">Web Design</option>
+            <option value="Web Dev">Web Developement</option>
+            <option value="Other">Other</option>
           </select>
           <label htmlFor="subject">Message:</label>
           <textarea name="subject" id="subject" cols="10" rows="10" />

@@ -18,7 +18,7 @@ function Projects(props) {
   };
 
   return (
-    <div className="projects-grid">
+    <div className="projects-grid container">
       <div className="project-menu">
         <ul className="project-list">
           {props.projects.data.viewer.repositories.nodes
@@ -37,15 +37,31 @@ function Projects(props) {
                     changeProject(project.name, project.description);
                   }}
                 >
-                  {project.name}
+                  <i className="fas fa-gem" />{' '}
+                  {project.name.split('-')[0] +
+                    ' ' +
+                    (project.name.split('-')[1] === undefined
+                      ? ''
+                      : project.name.split('-')[1])}
                 </li>
               );
             })}
         </ul>
       </div>
       <div className="main-project">
-        <h4>{project}</h4>
+        <h2 className="project-name">
+          {project.split('-')[0] +
+            ' ' +
+            (project.split('-')[1] === undefined ? '' : project.split('-')[1])}
+        </h2>
         <p>{description}</p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://github.com/nmelentjevs/${project}`}
+        >
+          <button className="project-button"> Github</button>
+        </a>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@
   position: relative;
   margin: auto 0;
   width: 100%;
-  text-align: right;
+  text-align: center;
   z-index: 1;
 }
 
@@ -46,16 +46,30 @@ nav {
 .nav-list {
   text-align: center;
   font-size: 2rem;
-  line-height: 50px;
+  line-height: 3rem;
 }
 
 .nav-item {
   cursor: pointer;
 }
 
+.nav-item:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.nav-item:hover:after {
+  width: 6rem;
+  background: #fd57bf;
+}
+
 .container {
   width: 90%;
-  max-width: 120rem;
+  max-width: 80rem;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -76,6 +90,8 @@ nav {
 
 .about-details {
   font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 .centered {
@@ -95,9 +111,9 @@ nav {
   align-self: center;
   border: 1px #fd57bf solid;
   text-align: center;
-  height: 300px;
-  max-width: 1000px;
-  min-height: 400px;
+  min-width: 90%;
+  min-height: 250px;
+  margin: 0 auto;
 }
 
 .project-list {
@@ -118,6 +134,20 @@ nav {
   color: white;
 }
 
+.project-list-item:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.project-list-item:hover:after {
+  width: 5rem;
+  background: purple;
+}
+
 /* Projects End  */
 
 .about-heading h1 {
@@ -133,6 +163,30 @@ nav {
 .profile-img {
   flex: 1;
   margin-right: 5rem;
+}
+
+.project-button {
+  width: 100px;
+  height: 40px;
+  color: black;
+  cursor: pointer;
+}
+
+.main-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.main-project a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.main-project p {
+  width: 80%;
+  margin: 1.5rem auto;
 }
 
 .about-details {
@@ -162,6 +216,10 @@ nav {
 
 .icon-list li {
   list-style: none;
+}
+
+.icon-link {
+  width: 20px;
 }
 
 .social-media i {
@@ -239,6 +297,10 @@ input[type='submit']:hover {
 }
 
 /*End contact*/
+
+.small-text {
+  font-size: 2rem;
+}
 
 /*Start media queries*/
 

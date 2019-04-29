@@ -23,7 +23,7 @@ function About() {
             <i className="fab fa-node-js fa-2x" />
             <i className="fab fa-js fa-2x" />
             <i className="fab fa-python fa-2x" />
-            <i class="fas fa-database fa-2x" />
+            <i className="fas fa-database fa-2x" />
           </div>
           <div className="social-media">
             <ul className="icon-list">
