@@ -14,9 +14,8 @@ function About() {
             <h6>Myself</h6>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi sed
-            delectus magnam quis exercitationem voluptates doloribus laudantium
-            reprehenderit ab facilis!
+            Riga based full-stack web developer. Main stack is ReactJS/Redux,
+            NodeJS, Express, MongoDB, GraphQL.
           </p>
           <div className="skills-grid">
             <i className="fab fa-react fa-2x" />

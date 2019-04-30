@@ -148,7 +148,16 @@ nav {
   background: purple;
 }
 
+.project-button:hover {
+  background-color: #fd57bf;
+  border: none;
+  transition: background-color 650ms;
+}
 /* Projects End  */
+
+.about-heading {
+  margin-bottom: 5rem;
+}
 
 .about-heading h1 {
   font-size: 10rem;
