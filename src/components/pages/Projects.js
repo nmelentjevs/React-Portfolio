@@ -55,13 +55,31 @@ function Projects(props) {
             (project.split('-')[1] === undefined ? '' : project.split('-')[1])}
         </h2>
         <p>{description}</p>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://github.com/nmelentjevs/${project}`}
-        >
-          <button className="project-button"> Github</button>
-        </a>
+        <div>
+          <button className="project-button">
+            {' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://github.com/nmelentjevs/${project}`}
+            >
+              {' '}
+              Github{' '}
+            </a>
+          </button>
+
+          <button className="project-button">
+            {' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://${project.toLowerCase().split('-')[0] +
+                project.toLowerCase().split('-')[1]}.herokuapp.com/`}
+            >
+              Live{' '}
+            </a>{' '}
+          </button>
+        </div>
       </div>
     </div>
   );

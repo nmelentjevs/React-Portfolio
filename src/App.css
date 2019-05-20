@@ -148,6 +148,14 @@ nav {
   background: purple;
 }
 
+.project-button {
+  margin-right: 10px;
+}
+
+.project-button a {
+  color: black;
+}
+
 .project-button:hover {
   background-color: #fd57bf;
   border: none;
